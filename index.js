@@ -18,11 +18,8 @@ app.use(session({secret: 'baeMaxLoving'}))
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use("/public/js/react-0.13.3/build", express.static(__dirname + "/public/js/react-0.13.3/build"));
-app.use("/public/style", express.static(__dirname + '/public/style'));
+app.use(express.static('public'));
 app.use("/client/build", express.static(__dirname + '/client/build'));
-app.use("/public/js/jquery", express.static(__dirname + '/public/js/jquery'));
-app.use("/public/imgs", express.static(__dirname + '/public/imgs'));
 
 app.listen(config.PORT || 3000);
 
