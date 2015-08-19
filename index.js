@@ -19,7 +19,7 @@ app.use(session({secret: 'baeMaxLoving'}))
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use(express.static('public'));
+app.use("/public", express.static(__dirname + '/public'));
 app.use("/client/build", express.static(__dirname + '/client/build'));
 
 app.listen(config.PORT || 3000);
