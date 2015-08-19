@@ -1,6 +1,7 @@
 var express = require('express'),
 	bodyParser = require('body-parser'),
 	cookieParser = require('cookie-parser');
+	hbs = require('hbs'),
 	passport = require('passport'),
 	LocalStrategy = require('passport-local').Strategy,
 	session = require('express-session'),
